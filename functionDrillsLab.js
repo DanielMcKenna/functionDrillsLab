@@ -274,15 +274,46 @@ let totalFrogs = buying(9);
 */
 
 //CODE HERE
+function buying(gold) {
+  let balance = gold;
+  let totalFrogs = 0;
+  for (let i = 0; i <= balance; i++) {
+    if (balance >= 3) {
+      balance = balance - 3;
+      totalFrogs += 1;
+    } else {
+      console.log("you have no money");
+    }
+  }
+  console.log(totalFrogs);
+}
 
 ////////////////// PROBLEM 15 ////////////////////
 let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9];
+let ascendingArray = [0, 1, 2, 3];
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
+function ascendingOrder(arr) {
+  let previousNumber = 0;
+  let isAscending = true;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= previousNumber) {
+      previousNumber = arr[i];
+      continue;
+    } else {
+      isAscending = false;
+      break;
+    }
+  }
+  return isAscending;
+}
 
+let arrayIsAscending = ascendingOrder(ascendingArray);
+
+console.log(arrayIsAscending);
 ////////////////// PROBLEM 16 ////////////////////
 
 let duck = "cute";
