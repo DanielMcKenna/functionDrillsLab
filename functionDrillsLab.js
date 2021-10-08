@@ -38,7 +38,7 @@ function printName(personName) {
 
 function greeting(name) {
   let nameToString = String(name);
-  console.log(`Hello, ${name}`);
+  console.log(`Hello, ${nameToString}`);
 }
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -108,8 +108,6 @@ function faveColorFinder(color) {
 }
 
 let colorRating = faveColorFinder("blue");
-
-console.log(colorRating);
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
